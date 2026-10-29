@@ -21,6 +21,9 @@ export default function AddFood({ onSave, onClose }) {
       setMode('preview')
     }
     reader.readAsDataURL(file)
+    e.target.value = ""
+    // Reset so same file can be re-picked
+    e.target.value = ''
   }
 
   async function analyse() {
